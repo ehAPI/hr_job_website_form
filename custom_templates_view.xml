@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<openerp>
+		<data>
+			<template id="apply" inherit_id="website_hr_recruitment.apply">
+	            <xpath expr="//section/form/div/label[@for='phone']" position="before">
+               
+                    <div t-attf-class="form-group #{error.get('age') and 'has-error' or ''}">
+                        <label class="col-md-3 col-sm-4 control-label" for="age">Age</label>
+                        <div class="col-md-7 col-sm-8">
+                            <input type="age" t-att-value="default.get('age')" class="form-control" name="age" required="True"/>
+                        </div>
+                    </div>
+                          
+            	</xpath>
+           	</template>
+		</data>
+	</openerp>
